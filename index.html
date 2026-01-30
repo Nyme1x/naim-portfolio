@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Naim Badawi - Software Engineer & IT Analyst">
+    <title>Naim Albadawi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Naim Albadawi</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="animated-grid"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">SOFTWARE ENGINEER</div>
+                <h1 class="hero-title">Naim Albadawi</h1>
+                <p class="hero-subtitle">Full stack engineer specializing in cybersecurity, backend systems, and vulnerability management</p>
+                <p class="hero-description">I build secure, scalable solutions from end-to-end. Currently focused on enterprise security infrastructure and cloud deployments.</p>
+                <div class="hero-links">
+                    <a href="NaimResume.pdf" download="Naim_Badawi_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/naimalbadawi" target="_blank" title="LinkedIn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.809 0-9.719h3.554v1.375c.427-.659 1.191-1.592 2.897-1.592 2.117 0 3.704 1.385 3.704 4.362v5.574zM5.337 8.855c-1.144 0-1.915-.758-1.915-1.707 0-.955.768-1.707 1.953-1.707 1.186 0 1.916.752 1.942 1.707 0 .949-.756 1.707-1.98 1.707zm1.581 11.597H3.74V9.633h3.178v10.819zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Nyme1x" target="_blank" title="GitHub">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-container" id="codeContainer">
+                    <div class="code-3d">
+                        <div class="code-block code-block-1">
+                            <div class="code-line"><span class="keyword">class</span> <span class="class">NaimAlbadawi</span> {</div>
+                            <div class="code-line">  <span class="function">engineer</span>() {}</div>
+                            <div class="code-line">}</div>
+                        </div>
+                        <div class="code-block code-block-2">
+                            <div class="code-line"><span class="comment">// Naim Albadawi</span></div>
+                            <div class="code-line"><span class="comment">// Software Engineer</span></div>
+                            <div class="code-line"><span class="keyword">const</span> <span class="variable">role</span> = <span class="string">"Full Stack"</span></div>
+                        </div>
+                        <div class="code-block code-block-3">
+                            <div class="code-line"><span class="keyword">function</span> <span class="function">innovate</span>() {</div>
+                            <div class="code-line">  <span class="keyword">return</span> <span class="string">"Secure"</span>;</div>
+                            <div class="code-line">}</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image-section">
+                    <div class="profile-image-wrapper">
+                        <img src="naim.jpg" alt="Naim Albadawi" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-text-section">
+                    <p>I'm a Software Engineering graduate from Western University with a passion for cybersecurity and full-stack development. I completed a co-op position as an IT Analyst in Vulnerability Management at Ontario Health, where I focused on securing enterprise infrastructure and managing vulnerabilities.</p>
+                    <p>My expertise spans across security compliance, vulnerability remediation, network security, and cloud technologies. I've built solutions ranging from secure body-scanning systems to full-stack web applications with complex backend architectures.</p>
+                    <p>I'm constantly learning and pushing the boundaries of what's possible with modern tech stacks, always focused on delivering measurable impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Bash</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">NoSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">BigFix</span>
+                        <span class="tag">Apache</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Security & Compliance</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Vulnerability Management</span>
+                        <span class="tag">Cybersecurity</span>
+                        <span class="tag">SCUM</span>
+                        <span class="tag">CIS Compliance</span>
+                        <span class="tag">AWS Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>IT Analyst, Vulnerability Management</h3>
+                        <span class="date">Sep 2024 — Sep 2025</span>
+                    </div>
+                    <p class="company">Ontario Health • Toronto, ON (Co-op Position)</p>
+                    <ul class="experience-details">
+                        <li>Executed vulnerability remediation using WSUS, SCUM, and HCL BigFix within a governed patch management framework</li>
+                        <li>Supported enterprise vulnerability management operations by remediating operating system and application vulnerabilities</li>
+                        <li>Analyzed vulnerability findings and prioritized remediation based on risk severity, exploitability, and business impact</li>
+                        <li>Monitored patch compliance and generated detailed remediation reports for cybersecurity governance and audit requirements</li>
+                        <li>Collaborated with security engineers and infrastructure teams to investigate root causes and improve system hardening</li>
+                        <li>Supported enterprise IT operations with a focus on security compliance, vulnerability remediation, and endpoint hardening</li>
+                        <li>Led and coordinated patching cycles for hundreds of enterprise servers, ensuring timely remediation of high-risk vulnerabilities</li>
+                        <li>Worked with cross-functional teams to schedule maintenance and patching windows, reducing exposure to known threats</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Technical Solutions Representative</h3>
+                        <span class="date">May 2023 — September 2023</span>
+                    </div>
+                    <p class="company">Telus • Mississauga, ON</p>
+                    <ul class="experience-details">
+                        <li>Created, developed and implemented technical solutions tailored to client needs, enhancing customer satisfaction by up to 35%</li>
+                        <li>Collaborated with teams to analyze customer requirements, translating complex technical requirements into actionable strategies</li>
+                        <li>Gained expertise in developing technical solutions, cross-functional teamwork, client communication, and problem resolution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>3D Body Scanning System - Capstone Project</h3>
+                        <span class="tag tag-featured">Current</span>
+                    </div>
+                    <p class="project-description">Designed and implemented a comprehensive secure 3D body-scanning and measurement extraction system with privacy-aware handling of biometric data. Developed full pipeline for generating personalized 3D models with integrity checks, implemented computer vision algorithms and calibration routines, and built secure workflow to transmit user measurements with safe transfer practices and access control.</p>
+                    <ul class="project-tech">
+                        <li>Computer Vision</li>
+                        <li>3D Modeling</li>
+                        <li>Image Processing</li>
+                        <li>Security & Encryption</li>
+                        <li>Data Integrity</li>
+                        <li>Python</li>
+                        <li>API Design</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Ongoing Living & Learning Project</h3>
+                    </div>
+                    <p class="project-description">Supervised development of an interactive web application with Cheer Group to enhance daily living experiences for children with disabilities, including real-time communication tools and resource sharing features.</p>
+                    <ul class="project-tech">
+                        <li>React</li>
+                        <li>Full Stack Development</li>
+                        <li>MongoDB</li>
+                        <li>User Experience</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Collectiverse Card Game</h3>
+                    </div>
+                    <p class="project-description">Led development of a full-stack web-based card collecting game with MySQL backend and user query functionality, featuring five unique user-centric features and secure authentication.</p>
+                    <ul class="project-tech">
+                        <li>SQL</li>
+                        <li>Full Stack</li>
+                        <li>MySQL</li>
+                        <li>JSON Web Tokens</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>Bachelor of Engineering Science - Software Engineering (Co-op)</h3>
+                    <p class="school">Western University • London, ON</p>
+                    <p class="date">Sep 2021 — Apr 2026</p>
+                    <div class="education-details">
+                        <p><strong>Relevant Courses:</strong> Information Security, Networking, Computer Networks Applications, Intro to AI, Software Construction, Agile Programming, Parallel Algorithms, Cloud Computing, and Machine Learning</p>
+                        <p><strong>Certifications:</strong> BigFix 101, BigFix Relevance, ICS2 Cyber Security, AWS Certified Cloud Practitioner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-description">I'm always interested in hearing about new opportunities and challenging projects.</p>
+            <div class="contact-info">
+                <a href="mailto:Naimbadawi@gmail.com" class="contact-link">
+                    <span>📧</span> Naimbadawi@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/naimalbadawi/" target="_blank" class="contact-link">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://github.com/naimbadawi" target="_blank" class="contact-link">
+                    <span>🔗</span> GitHub
+                </a>
+                <a href="NaimResume.pdf" download="Naim_Badawi_Resume.pdf" target="_blank" class="contact-link">
+                    <span>📄</span> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Naim Albadawi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
