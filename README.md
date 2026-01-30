@@ -93,3 +93,4 @@ Modify the CSS variables in `styles.css`:
 ---
 
 Created with ❤️ | Naim Badawi | 2026
+# naim-portfolio
