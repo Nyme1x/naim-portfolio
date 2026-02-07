@@ -761,6 +761,7 @@ html.dark-mode .skill-category h3 {
     font-weight: 500;
     border: 1px solid var(--primary-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 html.dark-mode .tag {
@@ -1003,6 +1004,7 @@ html.dark-mode .project-description {
     color: var(--primary-color);
     font-weight: 500;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 html.dark-mode .project-tech li {
@@ -1015,6 +1017,7 @@ html.dark-mode .project-tech li {
 .project-tech li:hover {
     background: var(--primary-color);
     color: white;
+    box-shadow: 0 0 10px rgba(0, 102, 204, 0.3);
 }
 
 html.dark-mode .project-tech li:hover {
@@ -1206,6 +1209,422 @@ html.dark-mode .footer {
 }
 
 /* ===========================
+   PROJECT LINKS
+   =========================== */
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+html.dark-mode .project-link {
+    background: #0066cc;
+    border-color: #00d4ff;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.project-link:hover {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+html.dark-mode .project-link:hover {
+    background: #00d4ff;
+    color: #0f0f1f;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* ===========================
+   NAIMAI CHATBOT
+   =========================== */
+
+.naimai-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), #00d4ff);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+    transition: all 0.3s ease;
+}
+
+.naimai-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.6);
+}
+
+.naimai-button:active {
+    transform: scale(0.95);
+}
+
+.naimai-icon {
+    display: block;
+}
+
+/* Chatbot Modal */
+.naimai-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    height: 85vh;
+    max-height: 800px;
+    background: rgba(15, 15, 31, 0.95);
+    z-index: 998;
+    flex-direction: column;
+    animation: slideUp 0.3s ease;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 0 60px rgba(0, 212, 255, 0.3), 0 0 100px rgba(0, 102, 204, 0.2);
+}
+
+html.dark-mode .naimai-modal {
+    background: rgba(15, 15, 31, 0.98);
+    border: 2px solid rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 80px rgba(0, 212, 255, 0.4), 0 0 120px rgba(0, 102, 204, 0.3);
+}
+
+.naimai-modal.active {
+    display: flex;
+}
+
+/* Dark overlay backdrop */
+body.naimai-open {
+    overflow: hidden;
+}
+
+body.naimai-open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    animation: fadeIn 0.3s ease;
+}
+
+html.naimai-open body {
+    overflow: hidden;
+}
+
+html.naimai-open body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    animation: fadeIn 0.3s ease;
+}
+
+.naimai-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.naimai-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 2px solid #00d4ff;
+    background: linear-gradient(135deg, #0066cc, #00a8cc);
+    color: white;
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.4), 0 0 80px rgba(0, 102, 204, 0.3);
+}
+
+.naimai-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+    opacity: 0.8;
+}
+
+.naimai-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: linear-gradient(180deg, rgba(15, 15, 31, 0.9) 0%, rgba(26, 26, 46, 0.8) 100%);
+}
+
+html.dark-mode .naimai-messages {
+    background: linear-gradient(180deg, rgba(15, 15, 31, 0.95) 0%, rgba(26, 26, 46, 0.9) 100%);
+}
+
+.message {
+    display: flex;
+    gap: 0.5rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message-bubble {
+    max-width: 65%;
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
+    word-wrap: break-word;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.message.bot .message-bubble {
+    background: rgba(42, 42, 62, 0.7);
+    color: #ffffff;
+    border-radius: 18px 18px 18px 2px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.25), inset 0 0 20px rgba(0, 212, 255, 0.05);
+}
+
+html.dark-mode .message.bot .message-bubble {
+    background: rgba(42, 42, 62, 0.8);
+    color: #ffffff;
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.35), inset 0 0 20px rgba(0, 212, 255, 0.08);
+}
+
+.message.user .message-bubble {
+    background: linear-gradient(135deg, #0066cc, #0084ff);
+    color: white;
+    border-radius: 18px 18px 2px 18px;
+    border: 1px solid rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 25px rgba(0, 102, 204, 0.4), 0 0 50px rgba(0, 212, 255, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.naimai-input-area {
+    padding: 1.5rem 2rem;
+    border-top: 2px solid rgba(0, 212, 255, 0.3);
+    display: flex;
+    gap: 0.75rem;
+    background: linear-gradient(180deg, rgba(15, 15, 31, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%);
+    backdrop-filter: blur(10px);
+}
+
+html.dark-mode .naimai-input-area {
+    background: linear-gradient(180deg, rgba(15, 15, 31, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
+    border-top: 2px solid rgba(0, 212, 255, 0.4);
+}
+
+.naimai-input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: rgba(42, 42, 62, 0.5);
+    color: #ffffff;
+}
+
+html.dark-mode .naimai-input {
+    background: rgba(26, 26, 46, 0.8);
+    color: #ffffff;
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.naimai-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.naimai-input:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4), inset 0 0 10px rgba(0, 212, 255, 0.1);
+    background: rgba(26, 26, 46, 0.9);
+}
+
+html.dark-mode .naimai-input:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.5), inset 0 0 15px rgba(0, 212, 255, 0.15);
+}
+
+.send-btn {
+    padding: 1rem 1.75rem;
+    background: linear-gradient(135deg, #0066cc, #00a8ff);
+    color: white;
+    border: 2px solid #00d4ff;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+html.dark-mode .send-btn {
+    background: linear-gradient(135deg, #0066cc, #00a8ff);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+}
+
+.send-btn:hover {
+    background: linear-gradient(135deg, #0084ff, #00d4ff);
+    box-shadow: 0 0 35px rgba(0, 212, 255, 0.6), 0 0 60px rgba(0, 102, 204, 0.3);
+    transform: translateY(-2px);
+}
+
+html.dark-mode .send-btn:hover {
+    background: linear-gradient(135deg, #0084ff, #00d4ff);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.7), 0 0 70px rgba(0, 102, 204, 0.4);
+}
+
+.send-btn:active {
+    transform: scale(0.95);
+}
+
+/* ===========================
+   SKILL DEFINITION MODAL
+   =========================== */
+
+.skill-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+
+.skill-modal.active {
+    display: flex;
+}
+
+.skill-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+html.dark-mode .skill-modal-content {
+    background: #1a1a2e;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.skill-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.2s ease;
+}
+
+html.dark-mode .skill-modal-close {
+    color: #00d4ff;
+}
+
+.skill-modal-close:hover {
+    color: var(--primary-color);
+}
+
+html.dark-mode .skill-modal-close:hover {
+    color: #ffffff;
+}
+
+.skill-modal-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+html.dark-mode .skill-modal-content h4 {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.skill-modal-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+html.dark-mode .skill-modal-content p {
+    color: #b0b0b0;
+}
+
+/* ===========================
    RESPONSIVE DESIGN
    =========================== */
 
@@ -1323,6 +1742,54 @@ html.dark-mode .footer {
 
     section {
         padding: 3rem 1rem;
+    }
+
+    .naimai-modal {
+        width: 95%;
+        height: 90vh;
+        max-width: 100%;
+        max-height: 90vh;
+        transform: translate(-50%, -50%);
+    }
+
+    .naimai-container {
+        max-width: 100%;
+    }
+
+    .naimai-header {
+        padding: 1.5rem;
+    }
+
+    .naimai-messages {
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .message-bubble {
+        max-width: 85%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .naimai-input-area {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .naimai-input {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .send-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    .skill-modal-content {
+        max-width: 90%;
+        margin: 0 1rem;
     }
 }
 
